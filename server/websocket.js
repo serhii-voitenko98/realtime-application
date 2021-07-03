@@ -36,6 +36,7 @@ server.on('connection', function connection(ws) {
         break;
       }
       case 'connection': {
+        ws.username = message.username;
         broadcastMessage(message);
         break;
       }
@@ -44,6 +45,13 @@ server.on('connection', function connection(ws) {
         break;
       }
     }
+  });
+
+  ws.on('close', () => {
+    broadcastMessage({
+      event: 'close',
+      username: ws.username
+    });
   });
 });
 
