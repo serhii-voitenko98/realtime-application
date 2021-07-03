@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Alert, ListGroup } from 'react-bootstrap';
@@ -13,7 +13,7 @@ function Websocket() {
   const [play] = useSound('/sound.mp3', { volume: 0.25 });
 
   const connect = () => {
-    socket.current = new WebSocket('ws://192.168.0.101:5200');
+    socket.current = new WebSocket('ws://192.168.0.104:5200');
 
     socket.current.onopen = () => {
       setConnection(true);
