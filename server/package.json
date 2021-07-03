@@ -1,0 +1,30 @@
+{
+  "name": "realtime",
+  "version": "1.0.0",
+  "description": "long polling, event sourcing, websocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "long-polling": "nodemon long-polling.js -L",
+    "event-sourcing": "nodemon event-sourcing.js -L",
+    "websocket": "nodemon websocket.js -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhii-voitenko98/realtime-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serhii-voitenko98/realtime-application/issues"
+  },
+  "homepage": "https://github.com/serhii-voitenko98/realtime-application#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ws": "^7.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
