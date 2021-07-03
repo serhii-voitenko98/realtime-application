@@ -18,6 +18,7 @@ const getDate = () => {
 }
 
 const server = new webSocket.Server({
+  host: '0.0.0.0',
   port: PORT
 }, () => {
   console.log(`Server started on port ${PORT}`);
