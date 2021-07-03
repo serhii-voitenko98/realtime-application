@@ -39,6 +39,10 @@ server.on('connection', function connection(ws) {
         broadcastMessage(message);
         break;
       }
+      case 'close': {
+        broadcastMessage(message);
+        break;
+      }
     }
   });
 });

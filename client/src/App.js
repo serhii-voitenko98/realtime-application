@@ -6,7 +6,10 @@ function App() {
   return (
     // <LongPolling />
     // <EventSourcing />
-    <Websocket />
+    <div>
+      <h1 className="text-center mb-5 mt-5">Веб-чат</h1>
+      <Websocket />
+    </div>
   );
 }
 
